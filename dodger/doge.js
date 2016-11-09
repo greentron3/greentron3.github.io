@@ -1,3 +1,19 @@
+var C = {
+  "game":{
+   "width": 320,
+   "height": 568
+
+  },
+  "bg": {
+    "width": 320,
+    "height":568,
+    "xspeed": 0,
+    "yspeed": 700,
+    "file": "assets/irontrump.png"
+       }
+} 
+     
+    
 class Boot {
   preload() {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -12,7 +28,7 @@ create() {
 class Load {
     preload() {
       console.log("Loading...");
-      this.load.image("bg","assets/irontrump.png")
+      this.load.image("bg",C.bg.file )
     }
     create() {
       console.log("Loaded");
@@ -24,12 +40,17 @@ class Load {
    class Play {
      create() {
     console.log("Entered Play ");
+    
+    this.background = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
+    this.background.autoScroll(C.bg.xspeed,C.bg.yspeed);
      }
-            
-   }                     
+          
+ }                     
                       
-var game = new Phaser.Game(320,568);
+var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",Boot);
+game.state.add("Load",Load)
+game.state.add("Play",Play)
 game.state.start("Boot");
 
 
