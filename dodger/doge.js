@@ -11,7 +11,15 @@ var C = {
     "yspeed": 700,
     "file": "assets/irontrump.png"
        }
-} 
+},
+
+  "p": {
+        "file": "assets/player.png",
+       "width": 46,  
+       "height": 64,
+       "frames": 2  
+  }
+                    
      
     
 class Boot {
@@ -54,4 +62,4 @@ game.state.add("Play",Play)
 game.state.start("Boot");
 
 
-
+ 
