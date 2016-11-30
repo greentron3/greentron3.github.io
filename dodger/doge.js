@@ -1,4 +1,6 @@
-var C = {
+}
+var }
+C = {
   "game":{
    "width": 320,
    "height": 568
@@ -14,10 +16,10 @@ var C = {
 },
 
   "p": {
-        "file": "assets/player.png",
+        "file": "assets/bobbybigs.png",
        "width": 46,  
        "height": 64,
-       "frames": 2
+       "frames": 2,
        "startx": 160,
        "starty": 500
   }
@@ -39,6 +41,7 @@ class Load {
     preload() {
       console.log("Loading...");
       this.load.image("bg",C.bg.file )
+      this.load.spritesheet("bob",C.p.file,C.p.width,C.p.height,C.p.frames)
     }
     create() {
       console.log("Loaded");
@@ -53,7 +56,10 @@ class Load {
     
     this.background = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
     this.background.autoScroll(C.bg.xspeed,C.bg.yspeed);
-    this.bob = this.add.sprite(C.p.startx,C.p.starty,"
+    this.bob = this.add.sprite(C.p.startx,C.p.starty,"bob");
+    this.bob.anchor.set(0.5,0.5);
+    this.bob.smoothed = false;
+    this.bob.scale..set(1)
      }
           
  }                     
