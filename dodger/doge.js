@@ -17,7 +17,9 @@ var C = {
         "file": "assets/player.png",
        "width": 46,  
        "height": 64,
-       "frames": 2  
+       "frames": 2
+       "startx": 160,
+       "starty": 500
   }
                     
      
@@ -51,6 +53,7 @@ class Load {
     
     this.background = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
     this.background.autoScroll(C.bg.xspeed,C.bg.yspeed);
+    this.bob = this.add.sprite(C.p.startx,C.p.starty,"
      }
           
  }                     
