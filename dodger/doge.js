@@ -1,6 +1,5 @@
-}
-var }
-C = {
+
+var C = {
   "game":{
    "width": 320,
    "height": 568
@@ -12,18 +11,17 @@ C = {
     "xspeed": 0,
     "yspeed": 700,
     "file": "assets/irontrump.png"
-       }
-},
+  },
 
   "p": {
-        "file": "assets/bobbybigs.png",
+       "file": "assets/bobbybigs.png",
        "width": 46,  
        "height": 64,
        "frames": 2,
        "startx": 160,
        "starty": 500
   }
-                    
+}                  
      
     
 class Boot {
@@ -61,7 +59,7 @@ class Load {
     this.bob.smoothed = false;
     this.bob.scale.set(1)
     this.bob.animations.add("anim")
-    this.bob.animations.play("anim",C.d.fps,true);
+    this.bob.animations.play("anim",C.p.fps,true);
      }
      update()  {
       console.log("Play.update() called.");
