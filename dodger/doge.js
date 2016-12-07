@@ -15,11 +15,12 @@ var C = {
 
   "p": {
        "file": "assets/bobbybigs.png",
-       "width": 46,  
-       "height": 64,
+       "width": 94,  
+       "height": 94,
        "frames": 2,
        "startx": 160,
-       "starty": 500
+       "starty": 500,
+       "fps":3
   }
 }                  
      
