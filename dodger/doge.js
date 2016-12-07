@@ -59,11 +59,14 @@ class Load {
     this.bob = this.add.sprite(C.p.startx,C.p.starty,"bob");
     this.bob.anchor.set(0.5,0.5);
     this.bob.smoothed = false;
-    this.bob.scale..set(1)
+    this.bob.scale.set(1)
+    this.bob.animations.add("anim")
+    this.bob.animations.play("anim",C.d.fps,true);
      }
-          
- }                     
-                      
+     update()  {
+      console.log("Play.update() called.");
+    }                     
+   } 
 var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",Boot);
 game.state.add("Load",Load)
